@@ -1,0 +1,20 @@
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 510px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+#first {
+    grid-column: 1;
+    grid-row: 1;
+}
+#first {
+    grid-column: 1;
+    grid-row: 2;
+}
