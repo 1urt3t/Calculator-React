@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Signs() {
   const numbers: number[] = Array.from(Array(10).keys());
   const [isActive, setIsActive] = useState(false);
+
   const border = () => {
     setIsActive(true);
   }
