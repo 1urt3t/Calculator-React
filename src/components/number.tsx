@@ -1,8 +1,8 @@
 
-export default function Number() {
+export default function Number({ counter }: { counter: string }) {
   return (
     <div className="number">
-        <div className="count">0</div>
+      <div className="count">{counter}</div>
     </div>
-  )
+  );
 }
