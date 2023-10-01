@@ -3,24 +3,33 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 510px;
-    border: 1px solid black;
+    width: 300px;
+    height: 653px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    background-color: #000000;
 }
 .number {
-    padding: 15px 10px;
-    border-bottom: 1px solid black;
+    padding: 150px 27px 15px 10px;
 }
 .count {
-    font-size: 40px;
+    font-size: 50px;
     float: right;
+    color: white;
 }
-
+.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+}
 .signs {
+    width: 100%;
+    padding: 5px;
     display: grid;
+    gap: 5px;
     height: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -33,58 +42,129 @@
     -ms-user-select: none;
 }
 .sign {
+    background-color: #505050;
+    color: white;
     cursor: pointer;
+    font-weight: 600;
     font-size: 30px;
     display: flex;
+    width: 63px;
+    height: 63px;
     justify-content: center;
-    border: 1px solid black;
-    height: 100%;
     align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s;
 }
-
 .sign:active {
-    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.808);
 }
-
+.sign:not(:active) {
+    transition: all 2s;
+    background-color: #505050;
+}
 #ac {
     grid-column: 1;
     grid-row: 1;
 }
-#plus_minus {
-    grid-column: 2;
-    grid-row: 1;
+#ac,
+#plus_minus,
+#percent {
+    color: black;
+    transition: all 0.1s;
 }
+
+#ac:active,
+#plus_minus:active,
+#percent:active {
+    background-color: rgb(255, 255, 255);
+}
+
+#ac:not(:active),
+#plus_minus:not(:active),
+#percent:not(:active) {
+    transition: all 1s;
+    background-color: #D4D4D2;
+}
+
+
 #percent {
     grid-column: 3;
     grid-row: 1;
+    color: black;
+    background-color: #D4D4D2;
+    font-size: 25px;
+    transition: all 0.1s;
 }
+
 #divide {
     grid-column: 4;
     grid-row: 1;
+    background-color: #FF9500;
+    font-size: 35px;
+    transition: all 0.5s;
+    transition: all 0.1s;
 }
 #plus {
     grid-column: 4;
     grid-row: 4;
+    background-color: #FF9500;
+    font-size: 40px;
+    transition: all 0.5s;
+    transition: all 0.1s;
 }
 #minus {
     grid-column: 4;
     grid-row: 3;
+    background-color: #FF9500;
+    font-size: 40px;
+    transition: all 0.5s;
+    transition: all 0.1s;
 }
 #multiply {
     grid-column: 4;
     grid-row: 2;
+    background-color: #FF9500;
+    font-size: 40px;
+    transition: all 0.5s;
+    transition: all 0.1s;
 }
 #dot {
     grid-column: 3;
     grid-row: 5;
+    font-size: 40px;
+    padding-bottom: 10px;
+    transition: all 0.1s;
 }
 #equals {
     grid-column: 4;
     grid-row: 5;
+    background-color: #FF9500;
+    font-size: 40px;
+    transition: all 0.1s;
+}
+#divide:active,
+#plus:active,
+#minus:active,
+#multiply:active,
+#equals:active {
+    background-color: white;
+    color: #FF9500;
+}
+#divide:not(:active),
+#plus:not(:active),
+#minus:not(:active),
+#multiply:not(:active),
+#equals:not(:active) {
+    transition: all 1s;
+    background-color: #FF9500;
 }
 #number0 {
-    grid-column: 1 / 3;
+    grid-column: 1/3;
     grid-row: 5;
+    width: 98%;
+    border-radius: 40px;
+    justify-content: left;
+    padding-left: 25px;
 }
 #number1 {
     grid-column: 1;

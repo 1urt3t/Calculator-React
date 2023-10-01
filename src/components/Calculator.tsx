@@ -3,58 +3,68 @@ import Number from "./number";
 import Signs from "./signs";
 
 export default function Calculator() {
-  const [counter, setCounter] = useState<string>('0');
-  const [counterTwo, setCounterTwo] = useState<string>('');
+  const [numberOne, setNumberOne] = useState<string>('0');
+  const [numberTwo, setNumberTwo] = useState<string>('');
   const [signR, setSignR] = useState<string>('');
+  const [AC, setAC] = useState<boolean>(true);
 
   const handleNumberClick = (number: string) => {
-    setCounter((prevCounter) => (prevCounter === '0' ? number : prevCounter + number));
+      setNumberOne((prevCounter) => prevCounter == '0' ? number: prevCounter + number);
   };
 
   const signFn = (sign: string) => {
-    if (sign === 'AC') {
-      setCounter('0');
-      setCounterTwo('');
+    const acFnDot = () => {
+      setNumberOne('0.');
+      setNumberTwo('');
       setSignR('');
+      setAC(true);
+    }
+    if (sign === 'AC') {
+      setNumberOne('0');
+      setNumberTwo('');
+      setSignR('');
+      setAC(true);
     } else if (sign === '%') {
-      const num: number = parseFloat(counter) / 100
-      setCounter(num.toString());
-    } else if (sign === '+-') {
-      const num: number = parseFloat(counter) * -1;
-      setCounter(num.toString());
+      const num: number = parseFloat(numberTwo != '' ? numberTwo:numberOne) / 100;
+      numberTwo != ''? setNumberTwo(num.toString()):setNumberOne(num.toString()) ;
+    } else if (sign === '+/-') {
+      const num: number = parseFloat(numberTwo != ''? numberTwo:numberOne) * -1;
+      numberTwo != ''? setNumberTwo(num.toString()):setNumberOne(num.toString()) ;
     } else if (sign === '.') {
-      if (!counter.includes('.')) {
-        setCounter(counter + '.');
+      if (numberTwo == '' ?!numberOne.includes('.'):!numberTwo.includes('.')) {
+        numberTwo == ''?setNumberOne(numberOne + '.'):acFnDot();
       }
-    } else if (sign === '//' || sign === '*' || sign === '-' || sign === '+' || sign === '=') {
-      if (counterTwo !== '') {
+    } else if (sign === '÷' || sign === '×' || sign === '-' || sign === '+' || sign === '=') {
+      if (numberTwo !== '' && numberOne !== '') {
         switch (signR) {
-          case '//':
-            const num1 = parseFloat(counterTwo);
-            const num2 = parseFloat(counter);
+          case '÷':
+            const num1 = parseFloat(numberTwo);
+            const num2 = parseFloat(numberOne);
             if (num2 !== 0) {
-              setCounter((num1 / num2).toString());
+              setNumberTwo((num1 / num2).toString());
             } else {
-              setCounter('Error');
+              setNumberOne('Error');
+              console.log('none')
             }
             break;
-          case '*':
-            setCounter((parseFloat(counterTwo) * parseFloat(counter)).toString());
+          case '×':
+            setNumberTwo((parseFloat(numberTwo) * parseFloat(numberOne)).toString());
             break;
           case '-':
-            setCounter((parseFloat(counterTwo) - parseFloat(counter)).toString());
+            setNumberTwo((parseFloat(numberTwo) - parseFloat(numberOne)).toString());
             break;
           case '+':
-            setCounter((parseFloat(counterTwo) + parseFloat(counter)).toString());
+            setNumberTwo((parseFloat(numberTwo) + parseFloat(numberOne)).toString());
             break;
           default:
             break;
         }
-        setCounterTwo('');
-        setSignR('');
-      } else {
-        setCounterTwo(counter);
-        setCounter('');
+        setNumberOne('');
+        sign == '=' ? setAC(true): setSignR(sign)
+      } else if (AC === true){
+        setAC(false);
+        numberTwo == '' ? setNumberTwo(numberOne): '';
+        setNumberOne('');
         setSignR(sign);
       }
     }
@@ -62,8 +72,8 @@ export default function Calculator() {
 
   return (
     <div className="calculator">
-      <Number counter={counter} counterTwo={counterTwo} />
-      <Signs onNumberClick={handleNumberClick} signFn={signFn} />
+      <Number counter={numberOne} counterTwo={numberTwo} />
+      <Signs onNumberClick={handleNumberClick} signFn={signFn} sign={signR}/>
     </div>
   );
 }

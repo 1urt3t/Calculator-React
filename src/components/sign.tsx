@@ -18,11 +18,11 @@ type SignesSecond = {
     },
     multiply: {
       id: 'multiply',
-      sign: '*'
+      sign: '×'
     },
     divide: {
       id: 'divide',
-      sign: '//'
+      sign: '÷'
     },
     dot: {
       id: 'dot',
@@ -38,7 +38,7 @@ type SignesSecond = {
     },
     plus_minus: {
       id: 'plus_minus',
-      sign: '+-'
+      sign: '+/-'
     },
     ac: {
       id: 'ac',
@@ -46,5 +46,5 @@ type SignesSecond = {
     }
   };
   
-export default signesObj; // Экспортируйте объект напрямую
+export default signesObj;
   
