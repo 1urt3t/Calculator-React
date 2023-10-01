@@ -45,7 +45,7 @@
     background-color: #505050;
     color: white;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 30px;
     display: flex;
     width: 63px;
@@ -92,7 +92,8 @@
     grid-row: 1;
     color: black;
     background-color: #D4D4D2;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 600;
     transition: all 0.1s;
 }
 
@@ -101,12 +102,14 @@
     grid-row: 1;
     background-color: #FF9500;
     font-size: 35px;
+    padding-bottom: 5px;
     transition: all 0.5s;
     transition: all 0.1s;
 }
 #plus {
     grid-column: 4;
     grid-row: 4;
+    padding-bottom: 5px;
     background-color: #FF9500;
     font-size: 40px;
     transition: all 0.5s;
@@ -115,6 +118,7 @@
 #minus {
     grid-column: 4;
     grid-row: 3;
+    padding-bottom: 5px;
     background-color: #FF9500;
     font-size: 40px;
     transition: all 0.5s;
@@ -125,6 +129,7 @@
     grid-row: 2;
     background-color: #FF9500;
     font-size: 40px;
+    padding-bottom: 5px;
     transition: all 0.5s;
     transition: all 0.1s;
 }
@@ -138,6 +143,7 @@
 #equals {
     grid-column: 4;
     grid-row: 5;
+    padding-bottom: 5px;
     background-color: #FF9500;
     font-size: 40px;
     transition: all 0.1s;
