@@ -21,7 +21,7 @@ type SignesSecond = {
       sign: '*'
     },
     divide: {
-      id: 'divide', // Исправлено с 'devide'
+      id: 'divide',
       sign: '//'
     },
     dot: {

@@ -1,8 +1,8 @@
 
-export default function Number({ counter }: { counter: string }) {
+export default function Number({ counter, counterTwo }: { counter: string, counterTwo: string }) {
   return (
     <div className="number">
-      <div className="count">{counter}</div>
+      <div className="count">{counter == '' ? counterTwo:counter}</div>
     </div>
   );
 }
