@@ -1,84 +1,20 @@
-@media (max-width: 330px) {
+@media (max-width: 400px) {
     .calculator {
-        width: 235px;
-        height: 520px;
+        width: 258px;
+        height: 560px;
     }
     .img {
-        width: 550px;
-    }
-    .number {
-        padding: 125px 27px 15px 7px;
+        height: 600px;
     }
     .count {
         font-size: 45px;
     }
-    .signs {
-        padding: 3px;
-    }
     .sign {
         font-size: 25px;
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
     }
-    #percent {
-        grid-column: 3;
-        grid-row: 1;
-        color: black;
-        background-color: #D4D4D2;
-        font-size: 30px;
-        font-weight: 600;
-        transition: all 0.1s;
-    }
-    
-    #divide {
-        grid-column: 4;
-        grid-row: 1;
-        background-color: #FF9500;
-        font-size: 30px;
-        padding-bottom: 5px;
-        transition: all 0.5s;
-        transition: all 0.1s;
-    }
-    #plus {
-        grid-column: 4;
-        grid-row: 4;
-        padding-bottom: 5px;
-        background-color: #FF9500;
-        font-size: 30px;
-        transition: all 0.5s;
-        transition: all 0.1s;
-    }
-    #minus {
-        grid-column: 4;
-        grid-row: 3;
-        padding-bottom: 5px;
-        background-color: #FF9500;
-        font-size: 30px;
-        transition: all 0.5s;
-        transition: all 0.1s;
-    }
-    #multiply {
-        grid-column: 4;
-        grid-row: 2;
-        background-color: #FF9500;
-        font-size: 30px;
-        padding-bottom: 5px;
-        transition: all 0.5s;
-        transition: all 0.1s;
-    }
-    #dot {
-        grid-column: 3;
-        grid-row: 5;
-        font-size: 30px;
-        padding-bottom: 10px;
-        transition: all 0.1s;
-    }
-    #equals {
-        grid-column: 4;
-        grid-row: 5;
-        padding-bottom: 5px;
-        background-color: #FF9500;
-        font-size: 30px;
-        transition: all 0.1s;
+    .number {
+        padding: 150px 23.5px 15px 10px;
     }
 }
