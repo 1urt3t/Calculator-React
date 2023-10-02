@@ -1,27 +1,30 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# IOS Calculator on React
 
-Currently, two official plugins are available:
+In this project I made a copy of the calculator that is used on the iPhone.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Project stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- HTML
 
-- Configure the top-level `parserOptions` property like this:
+- CSS
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- TSX
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- REACT
+
+- VITE
+
+
+## About project
+
+This project makes a copy of the main iOS calculator. This calculator does not have functions and expressions that are available when using the screen of iOS devices horizontally. But despite this, it works absolutely correctly and executes all basic commands.
+
+
+
+
+## Authors
+
+- [@1urt3t](https://www.github.com/1urt3t)
+
